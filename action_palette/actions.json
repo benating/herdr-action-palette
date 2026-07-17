@@ -16,7 +16,7 @@
       "id": "pane_close",
       "name": "Close Pane",
       "description": "Close the current pane",
-      "command": "herdr pane close --current"
+      "command": "herdr_action_palette_close_pane"
     },
     {
       "id": "pane_zoom_toggle",
@@ -83,6 +83,12 @@
       "name": "Show Pane Info",
       "description": "Display detailed info about the current pane",
       "command": "herdr pane get --current"
+    },
+    {
+      "id": "pane_rename",
+      "name": "Rename Pane",
+      "description": "Rename the current pane",
+      "command": "herdr_action_palette_rename_pane"
     }
   ],
   "tab": [
@@ -115,6 +121,12 @@
       "name": "Focus First Tab",
       "description": "Focus the first tab in the workspace",
       "command": "herdr tab focus w1:t1"
+    },
+    {
+      "id": "tab_rename",
+      "name": "Rename Tab",
+      "description": "Rename the current tab",
+      "command": "herdr_action_palette_rename_tab"
     }
   ],
   "workspace": [
@@ -141,6 +153,12 @@
       "name": "Show Workspace Info",
       "description": "Display detailed info about the current workspace",
       "command": "herdr workspace get --current"
+    },
+    {
+      "id": "workspace_rename",
+      "name": "Rename Workspace",
+      "description": "Rename the current workspace",
+      "command": "herdr_action_palette_rename_workspace"
     }
   ],
   "navigation": [

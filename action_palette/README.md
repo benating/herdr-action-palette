@@ -82,7 +82,7 @@ description = "Open action palette"
 
 ## Available Actions
 
-### Pane Actions (14 actions)
+### Pane Actions (15 actions)
 | Action | Description |
 |--------|-------------|
 | Split Pane Right | Split the current pane vertically |
@@ -93,8 +93,9 @@ description = "Open action palette"
 | Swap Pane Left/Right/Up/Down | Swap position with neighboring panes |
 | Show Pane Layout | Display the current pane layout |
 | Show Pane Info | Display detailed info about the current pane |
+| Rename Pane | Rename the current pane |
 
-### Tab Actions (5 actions)
+### Tab Actions (6 actions)
 | Action | Description |
 |--------|-------------|
 | New Tab | Create a new tab |
@@ -102,14 +103,16 @@ description = "Open action palette"
 | List Tabs | List all tabs in current workspace |
 | Show Tab Info | Display detailed info about the current tab |
 | Focus First Tab | Focus the first tab in the workspace |
+| Rename Tab | Rename the current tab |
 
-### Workspace Actions (4 actions)
+### Workspace Actions (5 actions)
 | Action | Description |
 |--------|-------------|
 | New Workspace | Create a new workspace |
 | Close Workspace | Close the current workspace |
 | List Workspaces | List all workspaces |
 | Show Workspace Info | Display detailed info about the current workspace |
+| Rename Workspace | Rename the current workspace |
 
 ### Navigation (2 actions)
 | Action | Description |
@@ -124,7 +127,7 @@ description = "Open action palette"
 | Show Status | Show server and client status |
 | Reload Config | Reload configuration from config.toml |
 
-**Total: 28 actions**
+**Total: 31 actions**
 
 ## Requirements
 
