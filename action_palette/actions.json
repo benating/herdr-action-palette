@@ -4,13 +4,13 @@
       "id": "pane_split_right",
       "name": "Split Pane Right",
       "description": "Split the current pane vertically (new pane on the right)",
-      "command": "herdr pane split --current --direction right"
+      "command": "herdr pane split --current --direction right --focus"
     },
     {
       "id": "pane_split_down",
       "name": "Split Pane Down",
       "description": "Split the current pane horizontally (new pane below)",
-      "command": "herdr pane split --current --direction down"
+      "command": "herdr pane split --current --direction down --focus"
     },
     {
       "id": "pane_close",
