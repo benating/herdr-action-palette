@@ -1,0 +1,27 @@
+id = "herdr.action_palette"
+name = "Action Palette"
+version = "0.1.0"
+min_herdr_version = "0.7.0"
+description = "Fuzzy-searchable action palette for Herdr default actions"
+platforms = ["linux", "macos", "windows"]
+
+# The user-facing entry point. Herdr qualifies it globally as
+# `herdr.action_palette.open`. Like every action, its command is run by the herdr
+# server WITHOUT a TTY, so it cannot run fzf itself — instead it opens the
+# `palette` overlay pane (below), which is where the interactive picker lives.
+[[actions]]
+id = "open"
+title = "Open Action Palette"
+contexts = ["workspace", "pane"]
+command = ["bash", "open.sh"]
+
+# The interactive popup. `popup` placement = a modal popup without changing the
+# tiled layout. This pane DOES get a TTY, so fzf works. The command is invoked
+# with an absolute path via $HERDR_PLUGIN_ROOT.
+[[panes]]
+id = "palette"
+title = "Action Palette"
+placement = "popup"
+width = "60%"
+height = "40%"
+command = ["bash", "-c", "exec \"$HERDR_PLUGIN_ROOT/picker.sh\""]

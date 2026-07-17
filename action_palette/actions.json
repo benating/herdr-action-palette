@@ -1,0 +1,180 @@
+{
+  "pane": [
+    {
+      "id": "pane_split_right",
+      "name": "Split Pane Right",
+      "description": "Split the current pane vertically (new pane on the right)",
+      "command": "herdr pane split --current --direction right"
+    },
+    {
+      "id": "pane_split_down",
+      "name": "Split Pane Down",
+      "description": "Split the current pane horizontally (new pane below)",
+      "command": "herdr pane split --current --direction down"
+    },
+    {
+      "id": "pane_close",
+      "name": "Close Pane",
+      "description": "Close the current pane",
+      "command": "herdr pane close --current"
+    },
+    {
+      "id": "pane_zoom_toggle",
+      "name": "Zoom Pane (Toggle)",
+      "description": "Toggle zoom for the current pane",
+      "command": "herdr pane zoom --current --toggle"
+    },
+    {
+      "id": "pane_focus_left",
+      "name": "Focus Pane Left",
+      "description": "Move focus to the pane on the left",
+      "command": "herdr pane focus --current --direction left"
+    },
+    {
+      "id": "pane_focus_right",
+      "name": "Focus Pane Right",
+      "description": "Move focus to the pane on the right",
+      "command": "herdr pane focus --current --direction right"
+    },
+    {
+      "id": "pane_focus_up",
+      "name": "Focus Pane Up",
+      "description": "Move focus to the pane above",
+      "command": "herdr pane focus --current --direction up"
+    },
+    {
+      "id": "pane_focus_down",
+      "name": "Focus Pane Down",
+      "description": "Move focus to the pane below",
+      "command": "herdr pane focus --current --direction down"
+    },
+    {
+      "id": "pane_swap_left",
+      "name": "Swap Pane Left",
+      "description": "Swap position with the pane on the left",
+      "command": "herdr pane swap --current --direction left"
+    },
+    {
+      "id": "pane_swap_right",
+      "name": "Swap Pane Right",
+      "description": "Swap position with the pane on the right",
+      "command": "herdr pane swap --current --direction right"
+    },
+    {
+      "id": "pane_swap_up",
+      "name": "Swap Pane Up",
+      "description": "Swap position with the pane above",
+      "command": "herdr pane swap --current --direction up"
+    },
+    {
+      "id": "pane_swap_down",
+      "name": "Swap Pane Down",
+      "description": "Swap position with the pane below",
+      "command": "herdr pane swap --current --direction down"
+    },
+    {
+      "id": "pane_layout",
+      "name": "Show Pane Layout",
+      "description": "Display the current pane layout",
+      "command": "herdr pane layout --current"
+    },
+    {
+      "id": "pane_info",
+      "name": "Show Pane Info",
+      "description": "Display detailed info about the current pane",
+      "command": "herdr pane get --current"
+    }
+  ],
+  "tab": [
+    {
+      "id": "tab_new",
+      "name": "New Tab",
+      "description": "Create a new tab",
+      "command": "herdr tab create"
+    },
+    {
+      "id": "tab_close",
+      "name": "Close Tab",
+      "description": "Close the current tab",
+      "command": "herdr tab close --current"
+    },
+    {
+      "id": "tab_list",
+      "name": "List Tabs",
+      "description": "List all tabs in current workspace",
+      "command": "herdr tab list"
+    },
+    {
+      "id": "tab_info",
+      "name": "Show Tab Info",
+      "description": "Display detailed info about the current tab",
+      "command": "herdr tab get --current"
+    },
+    {
+      "id": "tab_focus_first",
+      "name": "Focus First Tab",
+      "description": "Focus the first tab in the workspace",
+      "command": "herdr tab focus w1:t1"
+    }
+  ],
+  "workspace": [
+    {
+      "id": "workspace_new",
+      "name": "New Workspace",
+      "description": "Create a new workspace",
+      "command": "herdr workspace create"
+    },
+    {
+      "id": "workspace_close",
+      "name": "Close Workspace",
+      "description": "Close the current workspace",
+      "command": "herdr workspace close --current"
+    },
+    {
+      "id": "workspace_list",
+      "name": "List Workspaces",
+      "description": "List all workspaces",
+      "command": "herdr workspace list"
+    },
+    {
+      "id": "workspace_info",
+      "name": "Show Workspace Info",
+      "description": "Display detailed info about the current workspace",
+      "command": "herdr workspace get --current"
+    }
+  ],
+  "navigation": [
+    {
+      "id": "goto_picker",
+      "name": "Go To Picker",
+      "description": "Open workspace/tab/pane picker",
+      "command": "herdr goto picker"
+    },
+    {
+      "id": "toggle_sidebar",
+      "name": "Toggle Sidebar",
+      "description": "Toggle the sidebar visibility",
+      "command": "herdr ui toggle-sidebar"
+    }
+  ],
+  "session": [
+    {
+      "id": "detach",
+      "name": "Detach",
+      "description": "Detach from the current session (leave running)",
+      "command": "herdr detach"
+    },
+    {
+      "id": "status",
+      "name": "Show Status",
+      "description": "Show server and client status",
+      "command": "herdr status"
+    },
+    {
+      "id": "reload_config",
+      "name": "Reload Config",
+      "description": "Reload configuration from config.toml",
+      "command": "herdr server reload-config"
+    }
+  ]
+}

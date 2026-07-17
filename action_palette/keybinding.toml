@@ -1,0 +1,25 @@
+# Herdr Action Palette Keybinding Configuration
+# Add this section to your ~/.config/herdr/config.toml under the [keys] section
+#
+# This binds prefix+f to open the action palette overlay
+#
+# To use:
+# 1. First install/link the plugin: herdr plugin link /path/to/action_palette
+# 2. Add this configuration to your config.toml
+# 3. Reload config: herdr server reload-config
+#
+# Then press prefix+f to open the action palette
+
+[[keys.command]]
+key = "prefix+f"
+type = "plugin_action"
+command = "herdr.action_palette.open"
+description = "Open action palette"
+
+# Alternative: bind without prefix for faster access
+# Uncomment if you want direct access (make sure the chord is safe in your terminal)
+# [[keys.command]]
+# key = "ctrl+alt+f"
+# type = "plugin_action"
+# command = "herdr.action_palette.open"
+# description = "Open action palette (direct)"
