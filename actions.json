@@ -3,190 +3,190 @@
     {
       "id": "pane_split_right",
       "name": "Split Pane Right",
-      "description": "Split the current pane vertically (new pane on the right)",
-      "command": "herdr pane split --current --direction right --focus"
+      "description": "Split the pane the palette was opened from (new pane on the right)",
+      "command": "herdr pane split --pane @pane --direction right --focus"
     },
     {
       "id": "pane_split_down",
       "name": "Split Pane Down",
-      "description": "Split the current pane horizontally (new pane below)",
-      "command": "herdr pane split --current --direction down --focus"
+      "description": "Split the pane the palette was opened from (new pane below)",
+      "command": "herdr pane split --pane @pane --direction down --focus"
     },
     {
       "id": "pane_close",
       "name": "Close Pane",
-      "description": "Close the current pane",
-      "command": "herdr_action_palette_close_pane"
+      "description": "Close the pane the palette was opened from",
+      "command": "herdr pane close @pane"
     },
     {
       "id": "pane_zoom_toggle",
       "name": "Zoom Pane (Toggle)",
-      "description": "Toggle zoom for the current pane",
-      "command": "herdr pane zoom --current --toggle"
+      "description": "Toggle zoom for the pane the palette was opened from",
+      "command": "herdr pane zoom --pane @pane --toggle"
     },
     {
       "id": "pane_focus_left",
       "name": "Focus Pane Left",
       "description": "Move focus to the pane on the left",
-      "command": "herdr pane focus --current --direction left"
+      "command": "herdr pane focus --pane @pane --direction left"
     },
     {
       "id": "pane_focus_right",
       "name": "Focus Pane Right",
       "description": "Move focus to the pane on the right",
-      "command": "herdr pane focus --current --direction right"
+      "command": "herdr pane focus --pane @pane --direction right"
     },
     {
       "id": "pane_focus_up",
       "name": "Focus Pane Up",
       "description": "Move focus to the pane above",
-      "command": "herdr pane focus --current --direction up"
+      "command": "herdr pane focus --pane @pane --direction up"
     },
     {
       "id": "pane_focus_down",
       "name": "Focus Pane Down",
       "description": "Move focus to the pane below",
-      "command": "herdr pane focus --current --direction down"
+      "command": "herdr pane focus --pane @pane --direction down"
     },
     {
       "id": "pane_swap_left",
       "name": "Swap Pane Left",
       "description": "Swap position with the pane on the left",
-      "command": "herdr pane swap --current --direction left"
+      "command": "herdr pane swap --pane @pane --direction left"
     },
     {
       "id": "pane_swap_right",
       "name": "Swap Pane Right",
       "description": "Swap position with the pane on the right",
-      "command": "herdr pane swap --current --direction right"
+      "command": "herdr pane swap --pane @pane --direction right"
     },
     {
       "id": "pane_swap_up",
       "name": "Swap Pane Up",
       "description": "Swap position with the pane above",
-      "command": "herdr pane swap --current --direction up"
+      "command": "herdr pane swap --pane @pane --direction up"
     },
     {
       "id": "pane_swap_down",
       "name": "Swap Pane Down",
       "description": "Swap position with the pane below",
-      "command": "herdr pane swap --current --direction down"
+      "command": "herdr pane swap --pane @pane --direction down"
     },
     {
       "id": "pane_layout",
       "name": "Show Pane Layout",
       "description": "Display the current pane layout",
-      "command": "herdr pane layout --current"
+      "command": "@show herdr pane layout --pane @pane"
     },
     {
       "id": "pane_info",
       "name": "Show Pane Info",
       "description": "Display detailed info about the current pane",
-      "command": "herdr pane get --current"
+      "command": "@show herdr pane get @pane"
     },
     {
       "id": "pane_rename",
       "name": "Rename Pane",
-      "description": "Rename the current pane",
-      "command": "herdr_action_palette_rename_pane"
+      "description": "Rename the current pane (empty label clears it)",
+      "command": "herdr pane rename @pane @label_or_clear"
     }
   ],
   "tab": [
     {
       "id": "tab_new",
       "name": "New Tab",
-      "description": "Create a new tab",
-      "command": "herdr tab create"
+      "description": "Create a new tab in the current workspace, in the same directory",
+      "command": "herdr tab create --cwd @cwd --focus"
     },
     {
       "id": "tab_close",
       "name": "Close Tab",
       "description": "Close the current tab",
-      "command": "herdr tab close --current"
+      "command": "herdr tab close @tab"
     },
     {
       "id": "tab_list",
       "name": "List Tabs",
       "description": "List all tabs in current workspace",
-      "command": "herdr tab list"
+      "command": "@show herdr tab list --workspace @workspace"
     },
     {
       "id": "tab_info",
       "name": "Show Tab Info",
       "description": "Display detailed info about the current tab",
-      "command": "herdr tab get --current"
+      "command": "@show herdr tab get @tab"
     },
     {
       "id": "tab_focus_first",
       "name": "Focus First Tab",
       "description": "Focus the first tab in the workspace",
-      "command": "herdr tab focus w1:t1"
+      "command": "herdr tab focus @first_tab"
     },
     {
       "id": "tab_rename",
       "name": "Rename Tab",
       "description": "Rename the current tab",
-      "command": "herdr_action_palette_rename_tab"
+      "command": "herdr tab rename @tab @label"
     }
   ],
   "workspace": [
     {
       "id": "workspace_new",
       "name": "New Workspace",
-      "description": "Create a new workspace",
-      "command": "herdr workspace create"
+      "description": "Create a new workspace in the same directory",
+      "command": "herdr workspace create --cwd @cwd --focus"
     },
     {
       "id": "workspace_close",
       "name": "Close Workspace",
       "description": "Close the current workspace",
-      "command": "herdr workspace close --current"
+      "command": "herdr workspace close @workspace"
     },
     {
       "id": "workspace_list",
       "name": "List Workspaces",
       "description": "List all workspaces",
-      "command": "herdr workspace list"
+      "command": "@show herdr workspace list"
     },
     {
       "id": "workspace_info",
       "name": "Show Workspace Info",
       "description": "Display detailed info about the current workspace",
-      "command": "herdr workspace get --current"
+      "command": "@show herdr workspace get @workspace"
     },
     {
       "id": "workspace_rename",
       "name": "Rename Workspace",
       "description": "Rename the current workspace",
-      "command": "herdr_action_palette_rename_workspace"
+      "command": "herdr workspace rename @workspace @label"
     }
   ],
   "navigation": [
     {
       "id": "goto_picker",
       "name": "Go To Picker",
-      "description": "Open workspace/tab/pane picker",
-      "command": "herdr goto picker"
+      "description": "Open workspace/tab/pane picker — client key action, shows the chord",
+      "command": "@hint:goto"
     },
     {
       "id": "toggle_sidebar",
       "name": "Toggle Sidebar",
-      "description": "Toggle the sidebar visibility",
-      "command": "herdr ui toggle-sidebar"
+      "description": "Toggle the sidebar visibility — client key action, shows the chord",
+      "command": "@hint:toggle_sidebar"
     }
   ],
   "session": [
     {
       "id": "detach",
       "name": "Detach",
-      "description": "Detach from the current session (leave running)",
-      "command": "herdr detach"
+      "description": "Detach from the current session (leave running) — client key action, shows the chord",
+      "command": "@hint:detach"
     },
     {
       "id": "status",
       "name": "Show Status",
       "description": "Show server and client status",
-      "command": "herdr status"
+      "command": "@show herdr status"
     },
     {
       "id": "reload_config",
